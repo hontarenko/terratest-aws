@@ -9,13 +9,3 @@ jobs:
       - name: checkout
         uses: actions/checkout@v1
 
-      - name: SCP Command to Transfer Files
-        uses: appleboy/scp-action@v0.1.2
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          port: ${{ secrets.PORT }}
-          key: ${{ secrets.KEY }}
-          source: "*"
-          target: "code"
-          rm: true
